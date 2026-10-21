@@ -1,12 +1,7 @@
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
+from app.schemas import ItemEntrada, ItemSaida
 
 app = FastAPI()
-
-class ItemEntrada(BaseModel):
-    nome: str
-    quantidade: int = 1
-    comprado: bool = False
 
 itens = [
     {"id": 1, "nome": "Arroz", "quantidade": 2, "comprado": True},
