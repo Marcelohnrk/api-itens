@@ -1,5 +1,10 @@
 from fastapi import FastAPI, HTTPException
 from app.schemas import ItemEntrada, ItemSaida
+from app import models
+from app.database import engine, get_db
+from app.schemas import ItemEntrada, ItemSaida
+
+models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 

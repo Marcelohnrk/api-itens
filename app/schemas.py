@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class ItemEntrada(BaseModel):
@@ -9,3 +9,5 @@ class ItemEntrada(BaseModel):
 
 class ItemSaida(ItemEntrada):
     id: int
+
+    model_config = ConfigDict(from_attributes=True)

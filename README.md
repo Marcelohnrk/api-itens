@@ -42,6 +42,5 @@ API REST feita com Python e FastAPI para gerenciar uma lista de itens
 
 ## Próximos passos
 
-- [ ] Validação de dados em schemas
 - [ ] Banco de dados SQLite
 - [ ] Testes automatizados
